@@ -56,7 +56,7 @@ class JuiceWidget extends StatelessWidget {
                                   style: textStyle.copyWith(fontSize: 16),
                                 ),
                                 TextSpan(
-                                  text: juice.price,
+                                   text: '25.99',
                                   style: textStyle.copyWith(
                                     fontSize: 30,
                                     fontWeight: FontWeight.w800,
@@ -66,13 +66,13 @@ class JuiceWidget extends StatelessWidget {
                             ),
                           ),
                           SizedBox(
-                            height: 32,
-                            width: 80,
+                            height: 40,
+                            width: 100,
                             child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {Navigator.pushNamed(context, '/cha', arguments: [juice.id, juice.name,juice.image, juice.price, juice.descripcion]);},
                               child: const Text('Comprar ahora'),
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: juice.color, // Usa backgroundColor en lugar de primary
+                                backgroundColor: const Color.fromARGB(255, 159, 185, 205), 
                               ),
                             ),
                           ),

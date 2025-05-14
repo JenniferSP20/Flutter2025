@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tap2025/screens/challenge_screen.dart';
+import 'package:tap2025/screens/challengep2_screen.dart';
 import 'package:tap2025/screens/dashboard_screen.dart';
 import 'package:tap2025/screens/login_screen.dart';
 import 'package:tap2025/screens/popular_screen.dart';
@@ -18,11 +19,13 @@ class MyApp extends StatelessWidget {
       builder: (context, value, widget) {
         return MaterialApp(
           theme: ThemeSettings.setTheme(value),
+          debugShowCheckedModeBanner:false,
           home: const LoginScreen(),
           routes: {
             "/dash" : (context) => const DashboardScreen(),
             "/reto" : (context) => const ChallengScreen(),
-            "/api" : (context) => const PopularScreen()
+            "/api" : (context) => const PopularScreen(),
+            "/cha" : (context) => const Challengep2Screen(),
           },
         );
       }

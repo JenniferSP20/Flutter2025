@@ -16,7 +16,7 @@ class DashboardScreen extends StatelessWidget {
               backgroundImage: NetworkImage('https://i.pravatar.cc/300'),
             ),
             accountName: Text('Jennifer Silva'),
-            accountEmail: Text('jenny.silvap5Qgmail.com'),
+            accountEmail: Text('jenny.silvap5@gmail.com'),
           );
         },
         extendedTheme: const SidebarXTheme(
