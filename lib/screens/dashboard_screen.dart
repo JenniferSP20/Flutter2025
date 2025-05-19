@@ -15,12 +15,12 @@ class DashboardScreen extends StatelessWidget {
             currentAccountPicture: CircleAvatar(
               backgroundImage: NetworkImage('https://i.pravatar.cc/300'),
             ),
-            accountName: Text('Jennifer Silva'),
-            accountEmail: Text('jenny.silvap5@gmail.com'),
+            accountName: Text('Rubensin Torres Frias'), 
+            accountEmail: Text('ruben.torres@itcelaya.edu.mx')
           );
         },
         extendedTheme: const SidebarXTheme(
-          width: 250,
+          width: 250
         ),
         controller: SidebarXController(selectedIndex: 0, extended: true),
         items: [
@@ -29,32 +29,43 @@ class DashboardScreen extends StatelessWidget {
               Navigator.pop(context);
               Navigator.pushNamed(context, '/reto');
             },
-            icon: Icons.home,
-            label: 'Challenge App',
+            icon: Icons.home, label: 'Challenge App'
           ),
+          SidebarXItem(
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushNamed(context, '/api');
+            },
+            icon: Icons.movie, label: 'Popular Movies'
+          )
         ],
       ),
       appBar: AppBar(
-        title: const Text('Panel de control'),
+        title: Text('Panel de control'),
       ),
       body: HawkFabMenu(
         icon: AnimatedIcons.menu_arrow,
         body: const Center(
           child: Text('Your content here :)'),
-        ),
+        ), 
         items: [
           HawkFabMenuItem(
-            label: 'Theme Light',
-            ontap: () => GlobalValues.themeMode.value = ThemeMode.light,
-            icon: const Icon(Icons.light_mode),
+            label: 'Theme Light', 
+            ontap: () => GlobalValues.themeMode.value = 1, 
+            icon: const Icon(Icons.light_mode)
           ),
           HawkFabMenuItem(
-            label: 'Theme Dark',
-            ontap: () => GlobalValues.themeMode.value = ThemeMode.dark,
-            icon: const Icon(Icons.dark_mode),
+            label: 'Theme Dark', 
+            ontap: () => GlobalValues.themeMode.value = 0, 
+            icon: const Icon(Icons.dark_mode)
           ),
-        ],
-      ),
+          HawkFabMenuItem(
+            label: 'Theme Warm', 
+            ontap: () => GlobalValues.themeMode.value = 2, 
+            icon: const Icon(Icons.hot_tub)
+          )
+        ]
+      )
     );
   }
 }
