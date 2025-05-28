@@ -15,8 +15,8 @@ class DashboardScreen extends StatelessWidget {
             currentAccountPicture: CircleAvatar(
               backgroundImage: NetworkImage('https://i.pravatar.cc/300'),
             ),
-            accountName: Text('Rubensin Torres Frias'), 
-            accountEmail: Text('ruben.torres@itcelaya.edu.mx')
+            accountName: Text('Jennifer Maria Cruz Silva Paniagua'), 
+            accountEmail: Text('23031052@itcelaya.edu.mx')
           );
         },
         extendedTheme: const SidebarXTheme(
